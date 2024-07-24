@@ -1,0 +1,24 @@
+package: sgml-base
+
+slices:
+  bins:
+    contents:
+      /usr/sbin/install-sgmlcatalog:
+      /usr/sbin/update-catalog:
+
+  data:
+    contents:
+      /usr/share/sgml-base/catalog.centralized:
+      /usr/share/sgml-base/catalog.super:
+      /usr/share/sgml-base/transitional.cat:
+      /var/lib/sgml-base/:
+
+  extra:
+    contents:
+      /usr/share/lintian/overrides/sgml-base:
+
+  docs:
+    contents:
+      /usr/share/doc/sgml-base/**:
+      /usr/share/man/man8/install-sgmlcatalog.8.gz:
+      /usr/share/man/man8/update-catalog.8.gz:
