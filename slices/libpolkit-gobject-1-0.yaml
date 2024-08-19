@@ -7,7 +7,7 @@ slices:
   libs:
     essential:
       - libc6_libs
-      - libglib2.0-0_libs
+      - libglib2.0-0t64_libs
       - libsystemd0_libs
     contents:
       /usr/lib/*-linux-*/libpolkit-gobject-1.so.0*:

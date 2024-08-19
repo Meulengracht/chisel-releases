@@ -25,7 +25,7 @@ slices:
     contents:
       /usr/lib/systemd/catalog/dbus-broker-launch.catalog:
       /usr/lib/systemd/catalog/dbus-broker.catalog:
-  
+
   services:
     essential:
       - dbus-broker_bins
