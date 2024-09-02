@@ -5,7 +5,7 @@ systems:
   - -ubuntu-24.04-s390x
 
 execute: |
-  rootfs="$(install-slices libc-bin_nsswitch bash_bins coreutils_bins passwd_bins base-files_base login_bins polkitd_bins)"
+  rootfs="$(install-slices libc-bin_nsswitch bash_bins coreutils_bins passwd_bins base-files_base polkitd_bins)"
 
   # polkitd does a chdir("/") and that requires executable bit
   chmod +x "$rootfs"

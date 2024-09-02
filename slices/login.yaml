@@ -13,7 +13,6 @@ slices:
       - libpam-runtime_config
       - libpam0g_libs
       - login_config
-      - passwd_config
     contents:
       /usr/bin/faillog:
       /usr/bin/lastlog:

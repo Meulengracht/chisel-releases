@@ -16,6 +16,7 @@ slices:
       - libpolkit-agent-1-0_libs
       - libpolkit-gobject-1-0_libs
       - libsystemd0_libs
+      - login_bins
       - opensysusers_bins
       - polkitd_config
       - polkitd_pam-profile
