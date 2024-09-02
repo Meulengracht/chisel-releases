@@ -7,6 +7,7 @@ slices:
   bins:
     essential:
       - dbus-broker_bins
+      - libc6_gconv
       - libc6_libs
       - libduktape207_libs
       - libexpat1_libs
@@ -15,8 +16,10 @@ slices:
       - libpolkit-agent-1-0_libs
       - libpolkit-gobject-1-0_libs
       - libsystemd0_libs
+      - opensysusers_bins
       - polkitd_config
-      - polkitd_pam
+      - polkitd_pam-profile
+      - polkitd_rules
       - xml-core_catalog
     contents:
       /usr/bin/pkaction:
@@ -29,22 +32,22 @@ slices:
 
   config:
     contents:
+      /var/lib/polkit-1/: { make: true, mode: 0700 }
       /usr/lib/sysusers.d/polkit.conf:
       /usr/lib/tmpfiles.d/polkitd.conf:
 
   dbus-interface:
-    essential:
-      - polkitd_bins
     contents:
       /usr/share/dbus-1/system-services/org.freedesktop.PolicyKit1.service:
       /usr/share/dbus-1/system.d/org.freedesktop.PolicyKit1.conf:
 
-  pam:
+  pam-profile:
     contents:
       /usr/lib/pam.d/polkit-1:
 
-  policies:
+  rules:
     contents:
+      /etc/polkit-1/rules.d/: { make: true, mode: 0755 }
       /usr/share/polkit-1/actions/org.freedesktop.policykit.policy:
       /usr/share/polkit-1/policyconfig-1.dtd:
       /usr/share/polkit-1/rules.d/49-ubuntu-admin.rules:
