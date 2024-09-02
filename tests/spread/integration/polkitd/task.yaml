@@ -22,5 +22,3 @@ execute: |
   # is not running.
   # If it starts up correctly, it will print "Entering main event loop"
   chroot "${rootfs}/" /usr/lib/polkit-1/polkitd | grep "Entering main event loop"
-
-  ls /nono
