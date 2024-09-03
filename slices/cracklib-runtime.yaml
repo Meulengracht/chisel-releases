@@ -1,11 +1,30 @@
 package: cracklib-runtime
 
+essential:
+  - cracklib-runtime_copyright
+
+# Cracklib runs /usr/sbin/update-cracklib on install, and this
+# in turns generate the cracklib caches. This is mostly possible to do
+# as a mutation script, and is provided here: 
+# https://paste.ubuntu.com/p/Jc5vvgk3tN/
+# however the files it writes are malformed as we cannot write raw bytes,
+# but instead we write files as text which results in larger files than 
+# expected (i.e the generated cracklib_dict.hwm is 1618 bytes instead of 1024).
+# If we could use the above mutation script, then the contents of the 'bins'
+# slice would probably not be needed, together with most of the 'config'
+# slice.
 slices:
+  # the scripts use both 'file', 'find' and 'grep'
+  # so we ensure those dependencies are added.
+  # furthermore, libssl3t64 is required as well
   bins:
     essential:
       - file_bins
+      - findutils_bins
+      - grep_bins
       - libc6_libs
       - libcrack2_libs
+      - libssl3t64_libs
       - cracklib-runtime_config
     contents:
       /usr/sbin/cracklib-check:
@@ -19,63 +38,9 @@ slices:
     contents:
       /etc/cracklib/cracklib.conf:
       /etc/logcheck/ignore.d.paranoid/cracklib-runtime:
-
-  # cache will attempt to create the initial cracklib cache and
-  # emulate what happens during postinst
-  cache:
-    contents:
-      /usr/share/dict/cracklib-small: { until: mutate }
+      /usr/share/dict/cracklib-small:
       /var/cache/cracklib/: { make: true, mode: 0755 }
-      /var/cache/cracklib/cracklib_dict.hwm: { text: '', mutate: true }
-      /var/cache/cracklib/cracklib_dict.pwd: { text: '', mutate: true }
-      /var/cache/cracklib/cracklib_dict.pwi: { text: '', mutate: true }
-    mutate: |
-      # this is the fixed database path
-      cracklib_dict = "/var/cache/cracklib/cracklib_dict"
-      
-      # sources are normally supported from multiple places
-      # 1. /usr/share/dict/cracklib (old)
-      # 2. /usr/local/share/dict/cracklib (local, old)
-      # 3. /usr/share/dict (carried in this package)
-      # 4. /usr/dict (not relevant)
-      # 5. /usr/local/share/dict  (not relevant)
-      # 6. /usr/local/dict (not relevant)
-      cracklib_sources = content.list("/usr/share/dict/")
-      
-      # takes a list of text files each containing a list of words, 
-      # one per line, It lowercases all words, removes control characters,
-      # and sorts the lists.
-      def format_sources(sources):
-        cleaned_words = []
-        for s in sources:
-          words = content.read("/usr/share/dict/" + s)
-          for w in words:
-            cw = w.lower().strip("\000-\011 \013 \014 \016-\037")
-            cleaned_words.append(cw)
-        return "\n".join(sorted(cleaned_words)) + "\n"
 
-      def blockify():
-
-      def create_caches(words):
-        # first, we process the words into blocks
-        blocks = 
-        for w in words:
-
-        return True
-
-
-      cleaned = format_sources(cracklib_sources)
-      
-      # needs to create 3 files:
-      # /var/cache/cracklib/cracklib_dict.hwm
-      # /var/cache/cracklib/cracklib_dict.pwd
-      # /var/cache/cracklib/cracklib_dict.pwi
-      create_caches(cleaned)
-
-      # generate /var/cache/cracklib/src-dicts
-      srcs_string = ""
-      for s in cracklib_sources:
-        # always prepend the space, this rivals what the official one
-        # is doing
-        srcs_string += " /usr/share/dict/" + s
-      content.write("/var/cache/cracklib/src-dicts", )
+  copyright:
+    contents:
+      /usr/share/doc/cracklib-runtime/copyright:

@@ -1,7 +1,7 @@
 package: libmagic-mgc
 
 essential:
-  - libmagic1t64_copyright
+  - libmagic-mgc_copyright
 
 slices:
   config:
@@ -12,4 +12,4 @@ slices:
 
   copyright:
     contents:
-      /usr/share/doc/libmagic1t64/copyright:
+      /usr/share/doc/libmagic-mgc/copyright:
