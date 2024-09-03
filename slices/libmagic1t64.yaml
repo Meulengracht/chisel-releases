@@ -12,7 +12,7 @@ slices:
       - zlib1g_libs
     contents:
       /usr/lib/*-linux-*/libmagic.so.1*:
-  
+
   config:
     essential:
       - libmagic-mgc_config
