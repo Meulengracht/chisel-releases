@@ -1,0 +1,45 @@
+package: systemd-resolved
+
+essential:
+  - systemd-resolved_copyright
+
+slices:
+  bins:
+    essential:
+      - dbus-broker_bins
+      - libc6_libs
+      - libssl3t64_libs
+      - libsystemd-shared_libs
+      - systemd_bins
+      - systemd-resolved_config
+    contents:
+      /usr/bin/resolvectl:
+      /usr/lib/systemd/systemd-resolved:
+      /usr/sbin/resolvconf:
+
+  config:
+    contents:
+      /etc/systemd/resolved.conf:
+      /usr/lib/sysusers.d/systemd-resolve.conf:
+      /usr/lib/tmpfiles.d/systemd-resolve.conf:
+
+  dbus-interface:
+    essential:
+      - systemd-resolved_bins
+    contents:
+      /usr/share/dbus-1/system.d/org.freedesktop.resolve1.conf:
+      /usr/share/dbus-1/system-services/org.freedesktop.resolve1.service:
+
+  polkit:
+    contents:
+      /usr/share/polkit-1/actions/org.freedesktop.resolve1.policy:
+
+  services:
+    essential:
+      - systemd-resolved_bins
+    contents:
+      /lib/systemd/system/systemd-resolved.service:
+
+  copyright:
+    contents:
+      /usr/share/doc/systemd-resolved/copyright:

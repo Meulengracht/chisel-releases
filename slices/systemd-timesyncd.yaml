@@ -1,0 +1,38 @@
+package: systemd-timesyncd
+
+essential:
+  - systemd-timesyncd_copyright
+
+slices:
+  bins:
+    essential:
+      - libc6_libs
+      - libsystemd-shared_libs
+      - systemd_bins
+      - systemd-timesyncd_config
+    contents:
+      /usr/lib/systemd/systemd-timesyncd:
+
+  config:
+    contents:
+      /etc/dhcp/dhclient-exit-hooks.d/timesyncd:
+      /etc/systemd/timesyncd.conf:
+      /usr/lib/sysusers.d/systemd-timesync.conf:
+      /usr/lib/systemd/ntp-units.d/80-systemd-timesync.list:
+
+  dbus-interface:
+    essential:
+      - systemd-timesyncd_bins
+    contents:
+      /usr/share/dbus-1/system-services/org.freedesktop.timesync1.service:
+      /usr/share/dbus-1/system.d/org.freedesktop.timesync1.conf:
+
+  services:
+    essential:
+      - systemd-timesyncd_bins
+    contents:
+      /usr/lib/systemd/system/systemd-timesyncd.service:
+
+  copyright:
+    contents:
+      /usr/share/doc/systemd-timesyncd/copyright:
