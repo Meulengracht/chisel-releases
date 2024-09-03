@@ -19,13 +19,13 @@ slices:
   # furthermore, libssl3t64 is required as well
   bins:
     essential:
+      - cracklib-runtime_config
       - file_bins
       - findutils_bins
       - grep_bins
       - libc6_libs
       - libcrack2_libs
       - libssl3t64_libs
-      - cracklib-runtime_config
     contents:
       /usr/sbin/cracklib-check:
       /usr/sbin/cracklib-format:
