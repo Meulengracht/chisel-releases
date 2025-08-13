@@ -1,0 +1,38 @@
+package: systemd-coredump
+
+essential:
+  - systemd-coredump_copyright
+
+slices:
+  bins:
+    essential:
+      - libc6_libs
+      - libsystemd-shared_libs
+      - systemd-coredump_services
+    contents:
+      /usr/bin/coredumpctl:
+
+  config:
+    contents:
+      /etc/systemd/coredump.conf:
+
+  limits-d:
+    contents:
+      /etc/security/limits.d/20-coredump-debian.conf:
+
+  services:
+    essential:
+      - systemd_bins
+    contents:
+      /usr/lib/sysctl.d/50-coredump.conf:
+      /usr/lib/systemd/system.conf.d/20-coredump-debian.conf:
+      /usr/lib/systemd/system/sockets.target.wants/systemd-coredump.socket:
+      /usr/lib/systemd/system/systemd-coredump.socket:
+      /usr/lib/systemd/system/systemd-coredump@.service:
+      /usr/lib/systemd/systemd-coredump:
+      /usr/lib/systemd/user.conf.d/20-coredump-debian.conf:
+      /usr/lib/sysusers.d/systemd-coredump.conf:
+
+  copyright:
+    contents:
+      /usr/share/doc/systemd-coredump/copyright:

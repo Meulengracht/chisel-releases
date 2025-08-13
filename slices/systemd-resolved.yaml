@@ -1,0 +1,42 @@
+package: systemd-resolved
+
+essential:
+  - systemd-resolved_copyright
+
+slices:
+  bins:
+    essential:
+      - libc6_libs
+      - libssl3t64_libs
+      - libsystemd-shared_libs
+      - systemd_bins
+      - systemd-resolved_config
+    contents:
+      /usr/bin/resolvectl:
+      /usr/sbin/resolvconf:
+      /usr/lib/systemd/systemd-resolved:
+
+  config:
+    contents:
+      /etc/systemd/resolved.conf:
+      /usr/lib/systemd/resolved.conf.d/cache-no-negative.conf:
+      /usr/lib/sysusers.d/systemd-resolve.conf:
+      /usr/lib/tmpfiles.d/systemd-resolve.conf:
+
+  dbus:
+    essential:
+#     - dbus_bins
+      - systemd-resolved_services
+    contents:
+      /usr/share/dbus-1/system-services/org.freedesktop.resolve1.service:
+      /usr/share/dbus-1/system.d/org.freedesktop.resolve1.conf:
+
+  services:
+    essential:
+      - systemd-resolved_bins
+    contents:
+      /usr/lib/systemd/system/systemd-resolved.service:
+
+  copyright:
+    contents:
+      /usr/share/doc/systemd-resolved/copyright:
