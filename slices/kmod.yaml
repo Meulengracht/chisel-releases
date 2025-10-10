@@ -1,0 +1,45 @@
+package: kmod
+
+essential:
+  - kmod_copyright
+
+slices:
+  core:
+    essential:
+      - kmod_bins
+      - kmod_config
+      - kmod_completions
+
+  bins:
+    essential:
+      - libc6_libs
+    contents:
+      /bin/kmod:
+      /bin/lsmod: 
+      /sbin/depmod: 
+      /sbin/insmod: 
+      /sbin/lsmod: 
+      /sbin/modinfo: 
+      /sbin/modprobe: 
+      /sbin/rmmod: 
+      /etc/init.d/kmod:
+  
+  config:
+    contents:
+      /lib/modprobe.d/aliases.conf:
+      /etc/depmod.d/ubuntu.conf:
+      /etc/modprobe.d/blacklist-ath_pci.conf:
+      /etc/modprobe.d/blacklist-firewire.conf:
+      /etc/modprobe.d/blacklist-framebuffer.conf:
+      /etc/modprobe.d/blacklist-rare-network.conf:
+      /etc/modprobe.d/blacklist.conf:
+      /etc/modprobe.d/iwlwifi.conf:
+      /usr/share/initramfs-tools/hooks/kmod:
+  
+  completions:
+    contents:
+      /usr/share/bash-completion/completions/kmod:
+
+  copyright:
+    contents:
+      /usr/share/doc/kmod/copyright:
