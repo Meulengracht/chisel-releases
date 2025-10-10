@@ -19,7 +19,6 @@ slices:
   completions:
     contents:
       /usr/share/bash-completion/bash_completion:
-      /usr/share/bash-completion/completions/*:
       /usr/share/bash-completion/completions/7z:
       /usr/share/bash-completion/completions/_adb:
       /usr/share/bash-completion/completions/_cal:
