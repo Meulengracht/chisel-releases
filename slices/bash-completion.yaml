@@ -4,7 +4,7 @@ essential:
   - bash-completion_copyright
 
 slices:
-  base:
+  core:
     essential:
       - bash-completion_bins
       - bash-completion_config
