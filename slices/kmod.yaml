@@ -1,8 +1,5 @@
 package: kmod
 
-essential:
-  - kmod_copyright
-
 slices:
   core:
     essential:
@@ -51,7 +48,3 @@ slices:
       /etc/modprobe.d/blacklist-rare-network.conf:
       /etc/modprobe.d/blacklist.conf:
       /etc/modprobe.d/iwlwifi.conf:
-
-  copyright:
-    contents:
-      /usr/share/doc/kmod/copyright:
