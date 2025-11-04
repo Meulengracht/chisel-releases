@@ -13,6 +13,7 @@ slices:
       - libpam-runtime_config
       - libpam0g_libs
       - login_config
+      - login.defs_config
     contents:
       /usr/bin/login:
       /usr/bin/newgrp:
