@@ -16,13 +16,12 @@ slices:
       - login.defs_config
     contents:
       /usr/bin/login:
-      /usr/bin/newgrp:
-      /usr/bin/sg:
       /usr/sbin/nologin:
 
   config:
     contents:
       /etc/pam.d/login:
+      /etc/pam.d/remote:
 
   copyright:
     contents:
