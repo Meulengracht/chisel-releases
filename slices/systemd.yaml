@@ -703,6 +703,9 @@ slices:
         arch: [amd64, arm64, riscv64]
       /usr/lib/systemd/system/systemd-pcrphase.service:
         arch: [amd64, arm64, riscv64]
+      /var/lib/pcrlock.d/:
+        arch: [amd64, arm64, riscv64]
+        make: true
 
   polkit:
     contents:
