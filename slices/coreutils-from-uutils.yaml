@@ -41,20 +41,20 @@ slices:
       - coreutils-from-uutils_od-utility
       - rust-coreutils_output-of-entire-files
     contents:
-      /usr/bin/base32:  { symlink: /usr/lib/cargo/bin/coreutils/base32 }
-      /usr/bin/base64:  { symlink: /usr/lib/cargo/bin/coreutils/base64 }
-      /usr/bin/basenc:  { symlink: /usr/lib/cargo/bin/coreutils/basenc }
-      /usr/bin/nl:      { symlink: /usr/lib/cargo/bin/coreutils/nl }
-      /usr/bin/tac:     { symlink: /usr/lib/cargo/bin/coreutils/tac }
+      /usr/bin/base32:  { symlink: ../lib/cargo/bin/coreutils/base32 }
+      /usr/bin/base64:  { symlink: ../lib/cargo/bin/coreutils/base64 }
+      /usr/bin/basenc:  { symlink: ../lib/cargo/bin/coreutils/basenc }
+      /usr/bin/nl:      { symlink: ../lib/cargo/bin/coreutils/nl }
+      /usr/bin/tac:     { symlink: ../lib/cargo/bin/coreutils/tac }
 
   # Formatting file contents
   formatting-file-contents:
     essential:
       - rust-coreutils_formatting-file-contents
     contents:
-      /usr/bin/fmt:  { symlink: /usr/lib/cargo/bin/coreutils/fmt }
-      /usr/bin/fold: { symlink: /usr/lib/cargo/bin/coreutils/fold }
-      /usr/bin/pr:   { symlink: /usr/lib/cargo/bin/coreutils/pr }
+      /usr/bin/fmt:  { symlink: ../lib/cargo/bin/coreutils/fmt }
+      /usr/bin/fold: { symlink: ../lib/cargo/bin/coreutils/fold }
+      /usr/bin/pr:   { symlink: ../lib/cargo/bin/coreutils/pr }
 
   # Output of parts of files
   output-of-parts-of-files:
@@ -64,32 +64,32 @@ slices:
       - coreutils-from-uutils_tail
       - rust-coreutils_output-of-parts-of-files
     contents:
-      /usr/bin/csplit: { symlink: /usr/lib/cargo/bin/coreutils/csplit }
+      /usr/bin/csplit: { symlink: ../lib/cargo/bin/coreutils/csplit }
 
   # Summarizing files
   summarizing-files:
     essential:
       - rust-coreutils_summarizing-files
     contents:
-      /usr/bin/b2sum:   { symlink: /usr/lib/cargo/bin/coreutils/b2sum }
-      /usr/bin/b3sum:   { symlink: /usr/lib/cargo/bin/coreutils/b3sum }
-      /usr/bin/cksum:   { symlink: /usr/lib/cargo/bin/coreutils/cksum }
-      /usr/bin/hashsum: { symlink: /usr/lib/cargo/bin/coreutils/hashsum }
-      /usr/bin/md5sum:  { symlink: /usr/lib/cargo/bin/coreutils/md5sum }
-      /usr/bin/sha1sum: { symlink: /usr/lib/cargo/bin/coreutils/sha1sum }
-      /usr/bin/sha224sum: { symlink: /usr/lib/cargo/bin/coreutils/sha224sum }
-      /usr/bin/sha256sum: { symlink: /usr/lib/cargo/bin/coreutils/sha256sum }
-      /usr/bin/sha384sum: { symlink: /usr/lib/cargo/bin/coreutils/sha384sum }
-      /usr/bin/sha512sum: { symlink: /usr/lib/cargo/bin/coreutils/sha512sum }
-      /usr/bin/sha3-224sum: { symlink: /usr/lib/cargo/bin/coreutils/sha3 }
-      /usr/bin/sha3-256sum: { symlink: /usr/lib/cargo/bin/coreutils/sha3 }
-      /usr/bin/sha3-384sum: { symlink: /usr/lib/cargo/bin/coreutils/sha3 }
-      /usr/bin/sha3-512sum: { symlink: /usr/lib/cargo/bin/coreutils/sha3 }
-      /usr/bin/sha3sum:     { symlink: /usr/lib/cargo/bin/coreutils/sha3sum }
-      /usr/bin/shake128sum: { symlink: /usr/lib/cargo/bin/coreutils/shake128sum }
-      /usr/bin/shake256sum: { symlink: /usr/lib/cargo/bin/coreutils/shake256sum }
-      /usr/bin/sum:      { symlink: /usr/lib/cargo/bin/coreutils/sum }
-      /usr/bin/wc:       { symlink: /usr/lib/cargo/bin/coreutils/wc }
+      /usr/bin/b2sum:   { symlink: ../lib/cargo/bin/coreutils/b2sum }
+      /usr/bin/b3sum:   { symlink: ../lib/cargo/bin/coreutils/b3sum }
+      /usr/bin/cksum:   { symlink: ../lib/cargo/bin/coreutils/cksum }
+      /usr/bin/hashsum: { symlink: ../lib/cargo/bin/coreutils/hashsum }
+      /usr/bin/md5sum:  { symlink: ../lib/cargo/bin/coreutils/md5sum }
+      /usr/bin/sha1sum: { symlink: ../lib/cargo/bin/coreutils/sha1sum }
+      /usr/bin/sha224sum: { symlink: ../lib/cargo/bin/coreutils/sha224sum }
+      /usr/bin/sha256sum: { symlink: ../lib/cargo/bin/coreutils/sha256sum }
+      /usr/bin/sha384sum: { symlink: ../lib/cargo/bin/coreutils/sha384sum }
+      /usr/bin/sha512sum: { symlink: ../lib/cargo/bin/coreutils/sha512sum }
+      /usr/bin/sha3-224sum: { symlink: ../lib/cargo/bin/coreutils/sha3 }
+      /usr/bin/sha3-256sum: { symlink: ../lib/cargo/bin/coreutils/sha3 }
+      /usr/bin/sha3-384sum: { symlink: ../lib/cargo/bin/coreutils/sha3 }
+      /usr/bin/sha3-512sum: { symlink: ../lib/cargo/bin/coreutils/sha3 }
+      /usr/bin/sha3sum:     { symlink: ../lib/cargo/bin/coreutils/sha3sum }
+      /usr/bin/shake128sum: { symlink: ../lib/cargo/bin/coreutils/shake128sum }
+      /usr/bin/shake256sum: { symlink: ../lib/cargo/bin/coreutils/shake256sum }
+      /usr/bin/sum:      { symlink: ../lib/cargo/bin/coreutils/sum }
+      /usr/bin/wc:       { symlink: ../lib/cargo/bin/coreutils/wc }
 
   # Operating on sorted files
   operating-on-sorted-files:
@@ -97,11 +97,11 @@ slices:
       - coreutils-from-uutils_sort
       - rust-coreutils_operating-on-sorted-files
     contents:
-      /usr/bin/comm: { symlink: /usr/lib/cargo/bin/coreutils/comm }
-      /usr/bin/ptx:  { symlink: /usr/lib/cargo/bin/coreutils/ptx }
-      /usr/bin/shuf: { symlink: /usr/lib/cargo/bin/coreutils/shuf }
-      /usr/bin/tsort: { symlink: /usr/lib/cargo/bin/coreutils/tsort }
-      /usr/bin/uniq: { symlink: /usr/lib/cargo/bin/coreutils/uniq }
+      /usr/bin/comm: { symlink: ../lib/cargo/bin/coreutils/comm }
+      /usr/bin/ptx:  { symlink: ../lib/cargo/bin/coreutils/ptx }
+      /usr/bin/shuf: { symlink: ../lib/cargo/bin/coreutils/shuf }
+      /usr/bin/tsort: { symlink: ../lib/cargo/bin/coreutils/tsort }
+      /usr/bin/uniq: { symlink: ../lib/cargo/bin/coreutils/uniq }
 
   # Operating on fields
   operating-on-fields:
@@ -110,7 +110,7 @@ slices:
       - coreutils-from-uutils_join
       - rust-coreutils_operating-on-fields
     contents:
-      /usr/bin/paste: { symlink: /usr/lib/cargo/bin/coreutils/paste }
+      /usr/bin/paste: { symlink: ../lib/cargo/bin/coreutils/paste }
 
   # Operating on characters
   operating-on-characters:
@@ -118,8 +118,8 @@ slices:
       - coreutils-from-uutils_tr-utility
       - rust-coreutils_operating-on-characters
     contents:
-      /usr/bin/expand:   { symlink: /usr/lib/cargo/bin/coreutils/expand }
-      /usr/bin/unexpand: { symlink: /usr/lib/cargo/bin/coreutils/unexpand }
+      /usr/bin/expand:   { symlink: ../lib/cargo/bin/coreutils/expand }
+      /usr/bin/unexpand: { symlink: ../lib/cargo/bin/coreutils/unexpand }
 
   # Directory listing
   directory-listing:
@@ -128,8 +128,8 @@ slices:
       - coreutils-from-uutils_ls-utility
       - rust-coreutils_directory-listing
     contents:
-      /usr/bin/dircolors: { symlink: /usr/lib/cargo/bin/coreutils/dircolors }
-      /usr/bin/vdir:      { symlink: /usr/lib/cargo/bin/coreutils/vdir }
+      /usr/bin/dircolors: { symlink: ../lib/cargo/bin/coreutils/dircolors }
+      /usr/bin/vdir:      { symlink: ../lib/cargo/bin/coreutils/vdir }
 
   # Basic operations
   basic-operations:
@@ -140,8 +140,8 @@ slices:
       - coreutils-from-uutils_rm-utility
       - rust-coreutils_basic-operations
     contents:
-      /usr/bin/cp:    { symlink: /usr/lib/cargo/bin/coreutils/cp }
-      /usr/bin/shred: { symlink: /usr/lib/cargo/bin/coreutils/shred }
+      /usr/bin/cp:    { symlink: ../lib/cargo/bin/coreutils/cp }
+      /usr/bin/shred: { symlink: ../lib/cargo/bin/coreutils/shred }
 
   # Special file types
   special-file-types:
@@ -154,8 +154,8 @@ slices:
       - coreutils-from-uutils_unlink
       - rust-coreutils_special-file-types
     contents:
-      /usr/bin/mkfifo: { symlink: /usr/lib/cargo/bin/coreutils/mkfifo }
-      /usr/bin/mknod:  { symlink: /usr/lib/cargo/bin/coreutils/mknod }
+      /usr/bin/mkfifo: { symlink: ../lib/cargo/bin/coreutils/mkfifo }
+      /usr/bin/mknod:  { symlink: ../lib/cargo/bin/coreutils/mknod }
 
   # Changing file attributes
   changing-file-attributes:
@@ -165,7 +165,7 @@ slices:
       - coreutils-from-uutils_touch
       - rust-coreutils_changing-file-attributes
     contents:
-      /usr/bin/chgrp: { symlink: /usr/lib/cargo/bin/coreutils/chgrp }
+      /usr/bin/chgrp: { symlink: ../lib/cargo/bin/coreutils/chgrp }
 
   # File space usage
   file-space-usage:
@@ -173,10 +173,10 @@ slices:
       - coreutils-from-uutils_stat
       - rust-coreutils_file-space-usage
     contents:
-      /usr/bin/df:      { symlink: /usr/lib/cargo/bin/coreutils/df }
-      /usr/bin/du:      { symlink: /usr/lib/cargo/bin/coreutils/du }
-      /usr/bin/sync:    { symlink: /usr/lib/cargo/bin/coreutils/sync }
-      /usr/bin/truncate: { symlink: /usr/lib/cargo/bin/coreutils/truncate }
+      /usr/bin/df:      { symlink: ../lib/cargo/bin/coreutils/df }
+      /usr/bin/du:      { symlink: ../lib/cargo/bin/coreutils/du }
+      /usr/bin/sync:    { symlink: ../lib/cargo/bin/coreutils/sync }
+      /usr/bin/truncate: { symlink: ../lib/cargo/bin/coreutils/truncate }
 
   # Printing text
   printing-text:
@@ -185,7 +185,7 @@ slices:
       - coreutils-from-uutils_printf
       - rust-coreutils_printing-text
     contents:
-      /usr/bin/yes: { symlink: /usr/lib/cargo/bin/coreutils/yes }
+      /usr/bin/yes: { symlink: ../lib/cargo/bin/coreutils/yes }
 
   # Conditions
   conditions:
@@ -194,15 +194,15 @@ slices:
       - coreutils-from-uutils_test
       - rust-coreutils_conditions
     contents:
-      /usr/bin/false: { symlink: /usr/lib/cargo/bin/coreutils/false }
-      /usr/bin/true:  { symlink: /usr/lib/cargo/bin/coreutils/true }
+      /usr/bin/false: { symlink: ../lib/cargo/bin/coreutils/false }
+      /usr/bin/true:  { symlink: ../lib/cargo/bin/coreutils/true }
 
   # Redirection
   redirection:
     essential:
       - rust-coreutils_redirection
     contents:
-      /usr/bin/tee: { symlink: /usr/lib/cargo/bin/coreutils/tee }
+      /usr/bin/tee: { symlink: ../lib/cargo/bin/coreutils/tee }
 
   # File name manipulation
   file-name-manipulation:
@@ -212,18 +212,18 @@ slices:
       - coreutils-from-uutils_mktemp
       - rust-coreutils_file-name-manipulation
     contents:
-      /usr/bin/pathchk: { symlink: /usr/lib/cargo/bin/coreutils/pathchk }
-      /usr/bin/realpath: { symlink: /usr/lib/cargo/bin/coreutils/realpath }
+      /usr/bin/pathchk: { symlink: ../lib/cargo/bin/coreutils/pathchk }
+      /usr/bin/realpath: { symlink: ../lib/cargo/bin/coreutils/realpath }
 
   # Working context
   working-context:
     essential:
       - rust-coreutils_working-context
     contents:
-      /usr/bin/printenv: { symlink: /usr/lib/cargo/bin/coreutils/printenv }
-      /usr/bin/pwd:      { symlink: /usr/lib/cargo/bin/coreutils/pwd }
-      /usr/bin/stty:     { symlink: /usr/lib/cargo/bin/coreutils/stty }
-      /usr/bin/tty:      { symlink: /usr/lib/cargo/bin/coreutils/tty }
+      /usr/bin/printenv: { symlink: ../lib/cargo/bin/coreutils/printenv }
+      /usr/bin/pwd:      { symlink: ../lib/cargo/bin/coreutils/pwd }
+      /usr/bin/stty:     { symlink: ../lib/cargo/bin/coreutils/stty }
+      /usr/bin/tty:      { symlink: ../lib/cargo/bin/coreutils/tty }
 
   # User information
   user-information:
@@ -231,12 +231,12 @@ slices:
       - coreutils-from-uutils_id-utility
       - rust-coreutils_user-information
     contents:
-      /usr/bin/groups: { symlink: /usr/lib/cargo/bin/coreutils/groups }
-      /usr/bin/logname: { symlink: /usr/lib/cargo/bin/coreutils/logname }
-      /usr/bin/pinky:  { symlink: /usr/lib/cargo/bin/coreutils/pinky }
-      /usr/bin/users:  { symlink: /usr/lib/cargo/bin/coreutils/users }
-      /usr/bin/who:    { symlink: /usr/lib/cargo/bin/coreutils/who }
-      /usr/bin/whoami: { symlink: /usr/lib/cargo/bin/coreutils/whoami }
+      /usr/bin/groups: { symlink: ../lib/cargo/bin/coreutils/groups }
+      /usr/bin/logname: { symlink: ../lib/cargo/bin/coreutils/logname }
+      /usr/bin/pinky:  { symlink: ../lib/cargo/bin/coreutils/pinky }
+      /usr/bin/users:  { symlink: ../lib/cargo/bin/coreutils/users }
+      /usr/bin/who:    { symlink: ../lib/cargo/bin/coreutils/who }
+      /usr/bin/whoami: { symlink: ../lib/cargo/bin/coreutils/whoami }
 
   # System context
   system-context:
@@ -244,45 +244,45 @@ slices:
       - coreutils-from-uutils_date
       - rust-coreutils_system-context
     contents:
-      /usr/bin/arch:   { symlink: /usr/lib/cargo/bin/coreutils/arch }
-      /usr/bin/hostid: { symlink: /usr/lib/cargo/bin/coreutils/hostid }
-      /usr/bin/nproc:  { symlink: /usr/lib/cargo/bin/coreutils/nproc }
-      /usr/bin/uname:  { symlink: /usr/lib/cargo/bin/coreutils/uname }
+      /usr/bin/arch:   { symlink: ../lib/cargo/bin/coreutils/arch }
+      /usr/bin/hostid: { symlink: ../lib/cargo/bin/coreutils/hostid }
+      /usr/bin/nproc:  { symlink: ../lib/cargo/bin/coreutils/nproc }
+      /usr/bin/uname:  { symlink: ../lib/cargo/bin/coreutils/uname }
 
   # SELinux context
   selinux-context:
     essential:
       - rust-coreutils_selinux-context
     contents:
-      /usr/bin/chcon: { symlink: /usr/lib/cargo/bin/coreutils/chcon }
-      /usr/bin/runcon: { symlink: /usr/lib/cargo/bin/coreutils/runcon }
+      /usr/bin/chcon: { symlink: ../lib/cargo/bin/coreutils/chcon }
+      /usr/bin/runcon: { symlink: ../lib/cargo/bin/coreutils/runcon }
 
   # Modified command invocation
   modified-command-invocation:
     essential:
       - rust-coreutils_modified-command-invocation
     contents:
-      /usr/bin/env:    { symlink: /usr/lib/cargo/bin/coreutils/env }
-      /usr/bin/nice:   { symlink: /usr/lib/cargo/bin/coreutils/nice }
-      /usr/bin/nohup:  { symlink: /usr/lib/cargo/bin/coreutils/nohup }
-      /usr/bin/stdbuf: { symlink: /usr/lib/cargo/bin/coreutils/stdbuf }
-      /usr/bin/timeout: { symlink: /usr/lib/cargo/bin/coreutils/timeout }
+      /usr/bin/env:    { symlink: ../lib/cargo/bin/coreutils/env }
+      /usr/bin/nice:   { symlink: ../lib/cargo/bin/coreutils/nice }
+      /usr/bin/nohup:  { symlink: ../lib/cargo/bin/coreutils/nohup }
+      /usr/bin/stdbuf: { symlink: ../lib/cargo/bin/coreutils/stdbuf }
+      /usr/bin/timeout: { symlink: ../lib/cargo/bin/coreutils/timeout }
 
   # Delaying
   delaying:
     essential:
       - rust-coreutils_delaying
     contents:
-      /usr/bin/sleep: { symlink: /usr/lib/cargo/bin/coreutils/sleep }
+      /usr/bin/sleep: { symlink: ../lib/cargo/bin/coreutils/sleep }
 
   # Numeric operations
   numeric-operations:
     essential:
       - rust-coreutils_numeric-operations
     contents:
-      /usr/bin/factor: { symlink: /usr/lib/cargo/bin/coreutils/factor }
-      /usr/bin/numfmt: { symlink: /usr/lib/cargo/bin/coreutils/numfmt }
-      /usr/bin/seq:    { symlink: /usr/lib/cargo/bin/coreutils/seq }
+      /usr/bin/factor: { symlink: ../lib/cargo/bin/coreutils/factor }
+      /usr/bin/numfmt: { symlink: ../lib/cargo/bin/coreutils/numfmt }
+      /usr/bin/seq:    { symlink: ../lib/cargo/bin/coreutils/seq }
 
   # Single-binary slices (mirroring coreutils-from-gnu)
 
@@ -290,218 +290,218 @@ slices:
     esential:
       - rust-coreutils_env
     contents:
-      /usr/bin/env: { symlink: /usr/lib/cargo/bin/coreutils/env }
+      /usr/bin/env: { symlink: ../lib/cargo/bin/coreutils/env }
 
   expr:
     esential:
       - rust-coreutils_expr
     contents:
-      /usr/bin/expr: { symlink: /usr/lib/cargo/bin/coreutils/expr }
+      /usr/bin/expr: { symlink: ../lib/cargo/bin/coreutils/expr }
 
   mkdir:
     esential:
       - rust-coreutils_mkdir
     contents:
-      /usr/bin/mkdir: { symlink: /usr/lib/cargo/bin/coreutils/mkdir }
+      /usr/bin/mkdir: { symlink: ../lib/cargo/bin/coreutils/mkdir }
 
   echo:
     esential:
       - rust-coreutils_echo
     contents:
-      /usr/bin/echo: { symlink: /usr/lib/cargo/bin/coreutils/echo }
+      /usr/bin/echo: { symlink: ../lib/cargo/bin/coreutils/echo }
 
   ln-utility:
     esential:
       - rust-coreutils_ln-utility
     contents:
-      /usr/bin/ln: { symlink: /usr/lib/cargo/bin/coreutils/ln }
+      /usr/bin/ln: { symlink: ../lib/cargo/bin/coreutils/ln }
 
   rm-utility:
     esential:
       - rust-coreutils_rm-utility
     contents:
-      /usr/bin/rm: { symlink: /usr/lib/cargo/bin/coreutils/rm }
+      /usr/bin/rm: { symlink: ../lib/cargo/bin/coreutils/rm }
 
   readlink:
     esential:
       - rust-coreutils_readlink
     contents:
-      /usr/bin/readlink: { symlink: /usr/lib/cargo/bin/coreutils/readlink }
+      /usr/bin/readlink: { symlink: ../lib/cargo/bin/coreutils/readlink }
 
   sort:
     esential:
       - rust-coreutils_sort
     contents:
-      /usr/bin/sort: { symlink: /usr/lib/cargo/bin/coreutils/sort }
+      /usr/bin/sort: { symlink: ../lib/cargo/bin/coreutils/sort }
 
   dirname:
     esential:
       - rust-coreutils_dirname
     contents:
-      /usr/bin/dirname: { symlink: /usr/lib/cargo/bin/coreutils/dirname }
+      /usr/bin/dirname: { symlink: ../lib/cargo/bin/coreutils/dirname }
 
   touch:
     esential:
       - rust-coreutils_touch
     contents:
-      /usr/bin/touch: { symlink: /usr/lib/cargo/bin/coreutils/touch }
+      /usr/bin/touch: { symlink: ../lib/cargo/bin/coreutils/touch }
 
   printf:
     esential:
       - rust-coreutils_printf
     contents:
-      /usr/bin/printf: { symlink: /usr/lib/cargo/bin/coreutils/printf }
+      /usr/bin/printf: { symlink: ../lib/cargo/bin/coreutils/printf }
 
   basename:
     esential:
       - rust-coreutils_basename
     contents:
-      /usr/bin/basename: { symlink: /usr/lib/cargo/bin/coreutils/basename }
+      /usr/bin/basename: { symlink: ../lib/cargo/bin/coreutils/basename }
 
   chmod:
     esential:
       - rust-coreutils_chmod
     contents:
-      /usr/bin/chmod: { symlink: /usr/lib/cargo/bin/coreutils/chmod }
+      /usr/bin/chmod: { symlink: ../lib/cargo/bin/coreutils/chmod }
 
   chown:
     esential:
       - rust-coreutils_chown
     contents:
-      /usr/bin/chown: { symlink: /usr/lib/cargo/bin/coreutils/chown }
+      /usr/bin/chown: { symlink: ../lib/cargo/bin/coreutils/chown }
 
   cut:
     esential:
       - rust-coreutils_cut
     contents:
-      /usr/bin/cut: { symlink: /usr/lib/cargo/bin/coreutils/cut }
+      /usr/bin/cut: { symlink: ../lib/cargo/bin/coreutils/cut }
 
   date:
     esential:
       - rust-coreutils_date
     contents:
-      /usr/bin/date: { symlink: /usr/lib/cargo/bin/coreutils/date }
+      /usr/bin/date: { symlink: ../lib/cargo/bin/coreutils/date }
 
   dd-utility:
     esential:
       - rust-coreutils_dd-utility
     contents:
-      /usr/bin/dd: { symlink: /usr/lib/cargo/bin/coreutils/dd }
+      /usr/bin/dd: { symlink: ../lib/cargo/bin/coreutils/dd }
 
   dir:
     esential:
       - rust-coreutils_dir
     contents:
-      /usr/bin/dir: { symlink: /usr/lib/cargo/bin/coreutils/dir }
+      /usr/bin/dir: { symlink: ../lib/cargo/bin/coreutils/dir }
 
   head:
     esential:
       - rust-coreutils_head
     contents:
-      /usr/bin/head: { symlink: /usr/lib/cargo/bin/coreutils/head }
+      /usr/bin/head: { symlink: ../lib/cargo/bin/coreutils/head }
 
   install:
     esential:
       - rust-coreutils_install
     contents:
-      /usr/bin/install: { symlink: /usr/lib/cargo/bin/coreutils/install }
+      /usr/bin/install: { symlink: ../lib/cargo/bin/coreutils/install }
 
   id-utility:
     esential:
       - rust-coreutils_id-utility
     contents:
-      /usr/bin/id: { symlink: /usr/lib/cargo/bin/coreutils/id }
+      /usr/bin/id: { symlink: ../lib/cargo/bin/coreutils/id }
 
   join:
     esential:
       - rust-coreutils_join
     contents:
-      /usr/bin/join: { symlink: /usr/lib/cargo/bin/coreutils/join }
+      /usr/bin/join: { symlink: ../lib/cargo/bin/coreutils/join }
 
   link:
     esential:
       - rust-coreutils_link
     contents:
-      /usr/bin/link: { symlink: /usr/lib/cargo/bin/coreutils/link }
+      /usr/bin/link: { symlink: ../lib/cargo/bin/coreutils/link }
 
   mktemp:
     esential:
       - rust-coreutils_mktemp
     contents:
-      /usr/bin/mktemp: { symlink: /usr/lib/cargo/bin/coreutils/mktemp }
+      /usr/bin/mktemp: { symlink: ../lib/cargo/bin/coreutils/mktemp }
 
   mv-utility:
     esential:
       - rust-coreutils_mv-utility
     contents:
-      /usr/bin/mv: { symlink: /usr/lib/cargo/bin/coreutils/mv }
+      /usr/bin/mv: { symlink: ../lib/cargo/bin/coreutils/mv }
 
   od-utility:
     esential:
       - rust-coreutils_od-utility
     contents:
-      /usr/bin/od: { symlink: /usr/lib/cargo/bin/coreutils/od }
+      /usr/bin/od: { symlink: ../lib/cargo/bin/coreutils/od }
 
   rmdir:
     esential:
       - rust-coreutils_rmdir
     contents:
-      /usr/bin/rmdir: { symlink: /usr/lib/cargo/bin/coreutils/rmdir }
+      /usr/bin/rmdir: { symlink: ../lib/cargo/bin/coreutils/rmdir }
 
   stat:
     esential:
       - rust-coreutils_stat
     contents:
-      /usr/bin/stat: { symlink: /usr/lib/cargo/bin/coreutils/stat }
+      /usr/bin/stat: { symlink: ../lib/cargo/bin/coreutils/stat }
 
   split:
     esential:
       - rust-coreutils_split
     contents:
-      /usr/bin/split: { symlink: /usr/lib/cargo/bin/coreutils/split }
+      /usr/bin/split: { symlink: ../lib/cargo/bin/coreutils/split }
 
   tail:
     esential:
       - rust-coreutils_tail
     contents:
-      /usr/bin/tail: { symlink: /usr/lib/cargo/bin/coreutils/tail }
+      /usr/bin/tail: { symlink: ../lib/cargo/bin/coreutils/tail }
 
   test:
     esential:
       - rust-coreutils_test
     contents:
-      /usr/bin/[:    { symlink: '/usr/lib/cargo/bin/coreutils/[' }
-      /usr/bin/test: { symlink: /usr/lib/cargo/bin/coreutils/test }
+      /usr/bin/[:    { symlink: '../lib/cargo/bin/coreutils/[' }
+      /usr/bin/test: { symlink: ../lib/cargo/bin/coreutils/test }
 
   timeout:
     esential:
       - rust-coreutils_timeout
     contents:
-      /usr/bin/timeout: { symlink: /usr/lib/cargo/bin/coreutils/timeout }
+      /usr/bin/timeout: { symlink: ../lib/cargo/bin/coreutils/timeout }
 
   tr-utility:
     esential:
       - rust-coreutils_tr-utility
     contents:
-      /usr/bin/tr: { symlink: /usr/lib/cargo/bin/coreutils/tr }
+      /usr/bin/tr: { symlink: ../lib/cargo/bin/coreutils/tr }
 
   unlink:
     esential:
       - rust-coreutils_unlink
     contents:
-      /usr/bin/unlink: { symlink: /usr/lib/cargo/bin/coreutils/unlink }
+      /usr/bin/unlink: { symlink: ../lib/cargo/bin/coreutils/unlink }
 
   cat:
     esential:
       - rust-coreutils_cat
     contents:
-      /usr/bin/cat: { symlink: /usr/lib/cargo/bin/coreutils/cat }
+      /usr/bin/cat: { symlink: ../lib/cargo/bin/coreutils/cat }
 
   ls-utility:
     esential:
       - rust-coreutils_ls-utility
     contents:
-      /usr/bin/ls: { symlink: /usr/lib/cargo/bin/coreutils/ls }
+      /usr/bin/ls: { symlink: ../lib/cargo/bin/coreutils/ls }
 
   copyright:
     contents:
