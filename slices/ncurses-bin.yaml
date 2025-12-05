@@ -7,7 +7,6 @@ slices:
   bins:
     essential:
       - libc6_libs
-      - libncursesw6_libs
       - libtinfo6_libs
     contents:
       /usr/bin/captoinfo:
