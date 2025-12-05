@@ -643,6 +643,9 @@ slices:
 
   pcrlock:
     contents:
+      /etc/pcrlock.d/:
+        arch: [amd64, arm64, riscv64]
+        make: true
       /usr/lib/pcrlock.d/350-action-efi-application.pcrlock:
         arch: [amd64, arm64, riscv64]
       /usr/lib/pcrlock.d/400-secureboot-separator.pcrlock.d/300-0x00000000.pcrlock:
