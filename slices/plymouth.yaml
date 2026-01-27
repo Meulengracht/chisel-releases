@@ -26,10 +26,8 @@ slices:
   theme:
     contents:
       /usr/share/plymouth/themes/details/details.plymouth:
-      /usr/share/plymouth/themes/spinner/watermark.png:
       /usr/share/plymouth/themes/text/text.plymouth:
       /usr/share/plymouth/themes/tribar/tribar.plymouth:
-      /usr/share/plymouth/ubuntu-logo.png:
       /usr/share/plymouth/plymouthd.defaults:
 
   init-d:
