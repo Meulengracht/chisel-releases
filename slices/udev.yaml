@@ -151,17 +151,19 @@ slices:
       /usr/lib/systemd/network/99-default.link:
       /usr/lib/systemd/system/sockets.target.wants/systemd-udevd-control.socket:
       /usr/lib/systemd/system/sockets.target.wants/systemd-udevd-kernel.socket:
+      /usr/lib/systemd/system/sockets.target.wants/systemd-udevd-varlink.socket:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-hwdb-update.service:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-udev-trigger.service:
       /usr/lib/systemd/system/sysinit.target.wants/systemd-udevd.service:
       /usr/lib/systemd/system/systemd-hwdb-update.service:
+      /usr/lib/systemd/system/systemd-udev-load-credentials.service:
       /usr/lib/systemd/system/systemd-udev-settle.service:
       /usr/lib/systemd/system/systemd-udev-trigger.service:
       /usr/lib/systemd/system/systemd-udevd-control.socket:
       /usr/lib/systemd/system/systemd-udevd-kernel.socket:
+      /usr/lib/systemd/system/systemd-udevd-varlink.socket:
       /usr/lib/systemd/system/systemd-udevd.service:
       /usr/lib/systemd/system/systemd-udevd.service.d/syscall-architecture.conf:
-      /usr/lib/systemd/system/udev.service:
       /usr/lib/systemd/systemd-udevd:
 
   sysusers-config:
