@@ -52,7 +52,7 @@ slices:
   config:
     contents:
       /etc/cloud/cloud.cfg:
-      /etc/cloud/cloud.cfg.d/:
+      /etc/cloud/cloud.cfg.d/05_logging.cfg:
       /etc/logrotate.d/cloud-init-base:
       /etc/profile.d/Z99-cloud-locale-test.sh:
       /etc/profile.d/Z99-cloudinit-warnings.sh:
