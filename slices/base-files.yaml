@@ -61,13 +61,6 @@ slices:
       /root/.bashrc: {copy: /usr/share/base-files/dot.bashrc}
       /root/.profile: {copy: /usr/share/base-files/dot.profile}
 
-  etc-defaults:
-    essential:
-      - base-files_etc
-    contents:
-      /etc/profile: {copy: /usr/share/base-files/profile}
-      /etc/networks: {copy: /usr/share/base-files/networks}
-
   release-info:
     essential:
       - base-files_etc
